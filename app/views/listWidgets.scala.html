@@ -1,0 +1,30 @@
+@(widgets_inicial: Seq[List], form: Form[WidgetForm.Dados], postUrl: Call)(implicit request: MessagesRequestHeader)
+<!--(implicit request: MessagesRequestHeader) used for HTTP requests-->
+
+    @main("Widgets") {
+
+        <h1>Widgets</h1>
+
+
+        <table>
+            <thead>
+            <tr><th>Name</th><th>Price</th>
+            </thead>
+            <tbody>
+            @for(w <- widgets_inicial) {
+            <tr><td>@w.name</td><td>@w.price</td><td>@w.size</td></tr>
+            }
+            </tbody>
+        </table>
+
+
+
+        @helper.form(postUrl) {
+        @helper.CSRF.formField
+        @helper.inputText(form("nAme"))
+        @helper.inputText(form("pRice"))
+        @helper.inputText(form("sIze"))
+        <button>Create widDDget</button>
+        }
+    }
+

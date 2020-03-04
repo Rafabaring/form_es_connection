@@ -1,0 +1,31 @@
+@(search_input: String, search_output: String, form: Form[es_search_form.Pesquisa], post_search_Url: Call)(implicit request: MessagesRequestHeader)
+<!--(implicit request: MessagesRequestHeader) used for HTTP requests-->
+
+    @main("Widgets") {
+
+        <h1>Widgets</h1>
+
+
+        <table>
+            <thead>
+            <tr><th>Behold! the result of your search</th>
+
+            </thead>
+            <tbody>
+
+
+            </tbody>
+        </table>
+
+
+        <p>search input</p>
+        <td>@search_input</td>
+        <p>your response</p>
+        <td>@search_output</td>
+
+        @helper.form(post_search_Url) {
+        @helper.CSRF.formField
+        @helper.inputText(form("seArch_input"))
+        <button>Search</button>
+        }
+    }

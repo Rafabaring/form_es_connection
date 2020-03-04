@@ -1,0 +1,4 @@
+[0m[[0m[33mwarn[0m] [0m[0m/Users/rafa/Documents/Baring_Git/form_es_connection/app/models/es_add_doc.scala:35:86: procedure syntax is deprecated: instead, add `: Unit =` to explicitly declare `add_doc`'s return type[0m
+[0m[[0m[33mwarn[0m] [0m[0m  def add_doc(name_individual: String, weight_individual: Int, year_individual: Int) {[0m
+[0m[[0m[33mwarn[0m] [0m[0m                                                                                     ^[0m
+[0m[[0m[33mwarn[0m] [0m[0mone warning found[0m
