@@ -9,7 +9,6 @@ import play.api.data.Form
 import models.es_search
 
 
-
 @Singleton
 class SearchController @Inject()(cc: MessagesControllerComponents) extends MessagesAbstractController(cc) {
 
@@ -26,7 +25,7 @@ class SearchController @Inject()(cc: MessagesControllerComponents) extends Messa
       val string_to_search = Pesquisa(search_input = search_data.search_input)
       search_input = string_to_search.search_input
 
-
+      // Perform elastic search query
       search_output = es_search.perform_search(search_input)
 
     }

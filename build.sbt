@@ -11,7 +11,7 @@ libraryDependencies += guice
 libraryDependencies += "org.scalatestplus.play" %% "scalatestplus-play" % "5.0.0" % Test
 
 
-
+libraryDependencies += "net.liftweb" %% "lift-json" % "3.4.0" // Convert to json
 
 
 libraryDependencies += "io.searchbox" % "jest" % "6.3.1"
@@ -22,7 +22,10 @@ libraryDependencies ++= Seq(
   "org.slf4j" % "slf4j-nop" % "1.7.30",
 
   //"com.typesafe.play" %% "play-json" % "2.6.7", // Json.stringify
-  "com.typesafe.play" %% "play" % "2.8.0"
+  "com.typesafe.play" %% "play" % "2.8.0",
+
+  
+  
 )
 
 // Adds additional packages into Twirl
